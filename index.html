@@ -153,7 +153,19 @@ myFunction</code></pre>
         <h3>Пример программы: Факториал</h3>
         <pre><code>(let factorial = (lambda (n) (if (<= n 1) 1 (* n (factorial (- n 1)))))) 
 (factorial 5)</code></pre>
-
+         <h3>Пример программы: Объявление переменных</h3>
+        
+        <pre><code>(let x = 10)
+(let y = 20)
+(print (+ x y))</code></pre>
+        
+        <h3>Пример программы: Объявление функций</h3>
+        <pre><code>(let square = (lambda (x) (* x x)))
+(print (square 5))</code></pre>
+        
+        <h3>Пример программы: Счётчик с использованием замыкания</h3>
+        <pre><code>(let square = (lambda (x) (* x x)))
+(print (square 5))</code></pre>
         <h2>Установка и запуск</h2>
         <h3>Требования</h3>
         <ul>
