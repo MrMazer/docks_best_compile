@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyFunctionalLanguage Documentation</title>
+    <title>bestcompile Documentation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -53,17 +53,32 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>MyFunctionalLanguage Documentation</h1>
+            <h1>bestcompile Documentation</h1>
         </div>
     </header>
     <div class="container main">
         <h2>Описание</h2>
-        <p>MyFunctionalLanguage — это функциональный язык программирования, реализованный для учебных целей. Этот язык поддерживает основные возможности функционального программирования и предоставляет простой синтаксис для написания и выполнения программ.</p>
+        <p>bestcompile — это функциональный язык программирования, реализованный для учебных целей. Этот язык поддерживает основные возможности функционального программирования и предоставляет простой синтаксис для написания и выполнения программ.</p>
 
         <h2>Возможности</h2>
         <ul>
@@ -124,8 +139,8 @@ myFunction</code></pre>
         <h3>Сборка проекта</h3>
         <ol>
             <li>Клонируйте репозиторий:
-                <pre><code>git clone https://github.com/yourusername/MyFunctionalLanguage.git
-cd MyFunctionalLanguage/MyFunctionalLanguage</code></pre>
+                <pre><code>git clone https://github.com/yourusername/bestcompile.git
+cd bestcompile/bestcompile</code></pre>
             </li>
             <li>Соберите проект:
                 <pre><code>dotnet build</code></pre>
@@ -134,7 +149,7 @@ cd MyFunctionalLanguage/MyFunctionalLanguage</code></pre>
 
         <h3>Запуск программы</h3>
         <ol>
-            <li>Создайте файл с исходным кодом на MyFunctionalLanguage, например, <code>example.bs</code>.
+            <li>Создайте файл с исходным кодом на bestcompile, например, <code>example.bs</code>.
                 <pre><code>(let factorial = (lambda (n) (if (<= n 1) 1 (* n (factorial (- n 1)))))) 
 (print (factorial 5))</code></pre>
             </li>
@@ -148,9 +163,34 @@ cd MyFunctionalLanguage/MyFunctionalLanguage</code></pre>
             <li><code>AST.fs</code>: Модуль, содержащий определение абстрактного синтаксического дерева (AST).</li>
             <li><code>Lexer.fs</code>: Модуль, содержащий лексер для разбора исходного кода на токены.</li>
             <li><code>Parser.fs</code>: Модуль, содержащий парсер для построения AST из токенов.</li>
-            <li><code>Interpreter.fs</code>: Модуль, содержащий интерпретатор для выполнения программ на MyFunctionalLanguage.</li>
+            <li><code>Interpreter.fs</code>: Модуль, содержащий интерпретатор для выполнения программ на bestcompile.</li>
             <li><code>Program.fs</code>: Главный файл программы, который связывает все модули и запускает интерпретатор.</li>
         </ul>
+
+        <h2>Команда</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Роль в проекте</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Имя 1</td>
+                    <td>Роль 1</td>
+                </tr>
+                <tr>
+                    <td>Имя 2</td>
+                    <td>Роль 2</td>
+                </tr>
+                <tr>
+                    <td>Имя 3</td>
+                    <td>Роль 3</td>
+                </tr>
+                <!-- Добавьте больше участников по мере необходимости -->
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
