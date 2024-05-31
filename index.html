@@ -164,8 +164,17 @@ myFunction</code></pre>
 (print (square 5))</code></pre>
         
         <h3>Пример программы: Счётчик с использованием замыкания</h3>
-        <pre><code>(let square = (lambda (x) (* x x)))
-(print (square 5))</code></pre>
+        <pre><code>(let counter = 
+    (lambda ()
+        (let count = 0)
+        (lambda ()
+            (set count (+ count 1))
+            count)))
+
+(let increment = (counter))
+(print (increment)) ; Выводит 1
+(print (increment)) ; Выводит 2
+(print (increment)) ; Выводит 3</code></pre>
         <h2>Установка и запуск</h2>
         <h3>Требования</h3>
         <ul>
