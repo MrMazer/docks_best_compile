@@ -2,11 +2,155 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MyFunctionalLanguage Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .main {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <div class="container">
+            <h1>MyFunctionalLanguage Documentation</h1>
+        </div>
+    </header>
+    <div class="container main">
+        <h2>Описание</h2>
+        <p>MyFunctionalLanguage — это функциональный язык программирования, реализованный для учебных целей. Этот язык поддерживает основные возможности функционального программирования и предоставляет простой синтаксис для написания и выполнения программ.</p>
+
+        <h2>Возможности</h2>
+        <ul>
+            <li>Именованные переменные (<code>let</code>)</li>
+            <li>Рекурсия</li>
+            <li>Лямбда-выражения (<code>lambda</code>)</li>
+            <li>Условные выражения (<code>if</code>)</li>
+            <li>Арифметические операции (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>)</li>
+            <li>Функции печати (<code>print</code>)</li>
+        </ul>
+
+        <h2>Синтаксис</h2>
+        <h3>Числа</h3>
+        <p>Числа представлены в виде целых или вещественных значений.</p>
+        <pre><code>123
+45.67</code></pre>
+
+        <h3>Строки</h3>
+        <p>Строки заключаются в двойные кавычки.</p>
+        <pre><code>"Hello, World!"</code></pre>
+
+        <h3>Логические значения</h3>
+        <p>Поддерживаются логические значения <code>true</code> и <code>false</code>.</p>
+        <pre><code>true
+false</code></pre>
+
+        <h3>Идентификаторы</h3>
+        <p>Идентификаторы представляют переменные и функции.</p>
+        <pre><code>x
+myFunction</code></pre>
+
+        <h3>Переменные</h3>
+        <p>Для присваивания значений переменным используется ключевое слово <code>let</code>.</p>
+        <pre><code>(let x = 10)</code></pre>
+
+        <h3>Условные выражения</h3>
+        <p>Условные выражения используют синтаксис <code>if</code>.</p>
+        <pre><code>(if (&lt; x 10) "less" "greater or equal")</code></pre>
+
+        <h3>Лямбда-выражения</h3>
+        <p>Лямбда-выражения объявляются с помощью ключевого слова <code>lambda</code>.</p>
+        <pre><code>(lambda (x) (* x x))</code></pre>
+
+        <h3>Вызовы функций</h3>
+        <p>Вызовы функций заключаются в круглые скобки.</p>
+        <pre><code>(myFunction 5 10)</code></pre>
+
+        <h3>Пример программы: Факториал</h3>
+        <pre><code>(let factorial = (lambda (n) (if (<= n 1) 1 (* n (factorial (- n 1)))))) 
+(factorial 5)</code></pre>
+
+        <h2>Установка и запуск</h2>
+        <h3>Требования</h3>
+        <ul>
+            <li>.NET SDK 6.0 или новее</li>
+        </ul>
+
+        <h3>Сборка проекта</h3>
+        <ol>
+            <li>Клонируйте репозиторий:
+                <pre><code>git clone https://github.com/yourusername/MyFunctionalLanguage.git
+cd MyFunctionalLanguage/MyFunctionalLanguage</code></pre>
+            </li>
+            <li>Соберите проект:
+                <pre><code>dotnet build</code></pre>
+            </li>
+        </ol>
+
+        <h3>Запуск программы</h3>
+        <ol>
+            <li>Создайте файл с исходным кодом на MyFunctionalLanguage, например, <code>example.bs</code>.
+                <pre><code>(let factorial = (lambda (n) (if (<= n 1) 1 (* n (factorial (- n 1)))))) 
+(print (factorial 5))</code></pre>
+            </li>
+            <li>Запустите программу:
+                <pre><code>dotnet run -- "example.bs"</code></pre>
+            </li>
+        </ol>
+
+        <h2>Структура проекта</h2>
+        <ul>
+            <li><code>AST.fs</code>: Модуль, содержащий определение абстрактного синтаксического дерева (AST).</li>
+            <li><code>Lexer.fs</code>: Модуль, содержащий лексер для разбора исходного кода на токены.</li>
+            <li><code>Parser.fs</code>: Модуль, содержащий парсер для построения AST из токенов.</li>
+            <li><code>Interpreter.fs</code>: Модуль, содержащий интерпретатор для выполнения программ на MyFunctionalLanguage.</li>
+            <li><code>Program.fs</code>: Главный файл программы, который связывает все модули и запускает интерпретатор.</li>
+        </ul>
+    </div>
 </body>
 </html>
